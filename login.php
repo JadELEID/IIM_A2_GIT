@@ -1,11 +1,11 @@
 <?php session_start();
-$email = $_POST['email'];
-$password = $_POST['password'];
 /******************************** 
 	 DATABASE & FUNCTIONS 
 ********************************/
 require('config/config.php');
 require('model/functions.fn.php');
+$email = $_POST['email'];
+$password = $_POST['password'];
 
 
 /********************************
