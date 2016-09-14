@@ -134,8 +134,7 @@ SUMMARY
 		$file -> 		file object : music
 	*/
 	function addMusic(PDO $db, $user_id, $title, $file){
-		$sql = "
-			INSERT INTO
+		$sql = "INSERT INTO
 				musics
 			SET
 				user_id = :user_id,
@@ -166,8 +165,7 @@ SUMMARY
 		$music_owner = isMusicOwner($db, $music_id, $user_id);
 
 		if($music_owner == true){
-			$sql = "
-				UPDATE
+			$sql = "UPDATE
 					musics
 				SET
 		            title = :title
@@ -241,8 +239,7 @@ SUMMARY
 
 	/*2.0!isMusicOwner*/
 	function isMusicOwner(PDO $db, $music_id, $user_id){
-		$sql = "
-			SELECT
+		$sql = "SELECT
 				COUNT(id) AS is_owner
 			FROM
 				musics
@@ -270,8 +267,7 @@ SUMMARY
 
 	/*2.1!updateProfilPicture*/
 	function updateProfilPicture(PDO $db, $pic, $user_id){
-		$sql = "
-								UPDATE
+		$sql = "UPDATE
 									users
 								SET
 						            picture = :pic
