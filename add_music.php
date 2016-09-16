@@ -14,7 +14,7 @@ if( isset($_FILES['music']) && !empty($_FILES['music']) &&
 		if (preg_match('/\.(mp3|ogg)$/i', $file['name'])) {
 			$filename = md5(uniqid(rand(), true));
 			$destination = "musics/{$filename}.{$ext}";
-			move_uploaded_file($_FILES['music']['tmp_name'], '$destination');
+			move_uploaded_file($_FILES['music']['tmp_name'], $destination);
 			addMusic($db, $_SESSION['id'],$_POST['title'], $destination);
 			// TODO
 
