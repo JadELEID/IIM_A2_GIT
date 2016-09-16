@@ -146,7 +146,7 @@ SUMMARY
 		$req->execute(array(
 			':user_id' => $user_id,
 			':title' => $title,
-			':file' => $file,
+			':file' => $file
 		));
 
 		return true;
